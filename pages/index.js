@@ -1,5 +1,6 @@
 import {Footer, Proyects, Form} from '../components';
 import Head from 'next/head';
+import { PATH_IMG } from '../lib/paths';
 
 export default function Home({ social_networks, information, proyects, main, seo, hero }) {
 
