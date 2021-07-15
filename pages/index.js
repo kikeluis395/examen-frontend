@@ -1,11 +1,18 @@
-import {Footer, Proyects, Form, Metatags} from '../components';
-
+import {Footer, Proyects, Form} from '../components';
+import Head from 'next/head';
 
 export default function Home({ social_networks, information, proyects, main, seo, hero }) {
 
   return (
     <>
-      <Metatags seo={seo}/>
+      <Head>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.seo_description}/>
+        <meta name="keywords" content={seo.seo_keywords}/>
+        <meta property="og:image" content={`${PATH_IMG}${seo.seo_image}`}/>
+        <meta property="og:description" content={seo.seo_description}/>
+        <meta property="og:site_name" content={seo.title}/>
+      </Head>
       <main>
         <Form hero={hero} seo={seo} main={main}/>
         <Proyects proyects={proyects}/>
