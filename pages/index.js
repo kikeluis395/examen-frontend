@@ -1,4 +1,4 @@
-import {Footer, Proyects, Form, Metatags } from '../components';
+import {Footer, Proyects, Form, Metatags} from '../components';
 
 
 export default function Home({ social_networks, information, proyects, main, seo, hero }) {
@@ -8,7 +8,6 @@ export default function Home({ social_networks, information, proyects, main, seo
       <Metatags seo={seo}/>
       <main>
         <Form hero={hero} seo={seo} main={main}/>
-        {/* <Hero hero={hero} seo={seo}/> */}
         <Proyects proyects={proyects}/>
       </main>
       <Footer social_networks={social_networks} information={information} hero={hero}/>
